@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+  <!-- Define message codes class name -->
+  <entry key="message-class-name">edu.ucla.library.sinai.thumbnailer.MessageCodes</entry>
+  
+  <!-- To process file: -->
+  <!-- mvn info.freelibrary:freelib-utils:generate-codes -DmessageFiles=`ls src/main/resources/*_messages.xml` -->
+  
+  <!-- General utility messages -->
+  <entry key="T-001">{}</entry>
+  <entry key="T-002">No directory of CSV files supplied</entry>
+  <entry key="T-003">Not found: {}</entry>
+  <entry key="T-004">Error reading file: {}</entry>
+  <entry key="T-005">Generating thumbnail for {} [{}]</entry>
+  <entry key="T-006">Invalid thumbnail size supplied: {}</entry>
+  <entry key="T-007">Ignoring previously created thumbnails</entry>
+  <entry key="T-008">Skipping previously created thumbnail: {}</entry>
+  <entry key="T-009">No destination S3 bucket supplied</entry>
+</properties>
