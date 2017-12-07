@@ -108,39 +108,39 @@
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
-        <plugin>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <dependencies>
-            <dependency>
-              <groupId>info.freelibrary</groupId>
-              <artifactId>freelib-resources</artifactId>
-              <version>${freelib.resources.version}</version>
-            </dependency>
-          </dependencies>
-          <configuration>
-            <stylesheetfile>javadocs.css</stylesheetfile>
-            <nonavbar>true</nonavbar>
-            <nosince>true</nosince>
-            <notimestamp>true</notimestamp>
-            <bottom> </bottom>
-            <detectLinks>false</detectLinks>
-            <additionalJOptions>
-              <additionalJOption>-J-Dhttp.agent=maven-javadoc-plugin-${pom.name}</additionalJOption>
-            </additionalJOptions>
-            <links>
-              <link>http://javadoc.io/page/io.airlift/airline/${airline.version}</link>
-            </links>
-          </configuration>
-          <executions>
-            <execution>
-              <id>site-javadocs</id>
-              <phase>site</phase>
-              <goals>
-                <goal>javadoc</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <dependencies>
+          <dependency>
+            <groupId>info.freelibrary</groupId>
+            <artifactId>freelib-resources</artifactId>
+            <version>${freelib.resources.version}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <stylesheetfile>javadocs.css</stylesheetfile>
+          <nonavbar>true</nonavbar>
+          <nosince>true</nosince>
+          <notimestamp>true</notimestamp>
+          <bottom> </bottom>
+          <detectLinks>false</detectLinks>
+          <additionalJOptions>
+            <additionalJOption>-J-Dhttp.agent=maven-javadoc-plugin-${pom.name}</additionalJOption>
+          </additionalJOptions>
+          <links>
+            <link>http://javadoc.io/page/io.airlift/airline/${airline.version}</link>
+          </links>
+        </configuration>
+        <executions>
+          <execution>
+            <id>site-javadocs</id>
+            <phase>site</phase>
+            <goals>
+              <goal>javadoc</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
