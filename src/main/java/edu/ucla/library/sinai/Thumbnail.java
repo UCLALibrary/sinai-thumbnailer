@@ -191,7 +191,7 @@ public final class Thumbnail {
 
                         // Configure the PUT request's metadata
                         metadata.setContentLength(bytes.length);
-                        metadata.setContentType(Format.JPG.getExtension());
+                        metadata.setContentType(Format.JPG.getMimeType());
 
                         // Create the PUT request
                         put = new PutObjectRequest(myBucket, key, new ByteArrayInputStream(bytes), metadata);
