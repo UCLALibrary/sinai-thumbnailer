@@ -19,4 +19,11 @@
   <entry key="T-007">Ignoring previously created thumbnails</entry>
   <entry key="T-008">Skipping previously created thumbnail: {}</entry>
   <entry key="T-009">No destination S3 bucket supplied</entry>
+  <entry key="T-010">No directory CSV file supplied</entry>
+  <entry key="T-011">Missing file system path to TIF directory</entry>
+  <entry key="T-012">Unable to add image file name to images map</entry>
+  <entry key="T-013">Total unique images in CSV files: {}</entry>
+  <entry key="T-014">Total number of images reconciled: {}</entry>
+  <entry key="T-015">Duplicate file system TIFF: {}</entry>
+  <entry key="T-016">No output file path/name supplied</entry>
 </properties>

@@ -60,8 +60,8 @@ public final class Thumbnail {
     @Inject
     public HelpOption myHelpOption;
 
-    @Option(name = { "-d", "--dir" }, description = "A directory that contains CSV source files")
-    public File myDir;
+    @Option(name = { "-d", "--dir" }, description = "A directory or file that contains CSV sources")
+    public File mySourceCSVs;
 
     @Option(name = { "-s", "--size" }, description = "A IIIF-formatted size string (e.g. '200,')")
     public String mySize;
@@ -99,7 +99,7 @@ public final class Thumbnail {
     }
 
     private void run() {
-        if (myDir == null) {
+        if (mySourceCSVs == null) {
             LOGGER.error(MessageCodes.T_002);
         } else if (mySize == null) {
             LOGGER.error(MessageCodes.T_006, "null");
@@ -155,7 +155,7 @@ public final class Thumbnail {
                 }
 
                 // Gather a list of all the images
-                for (final File file : FileUtils.listFiles(myDir, new FileExtFileFilter("csv"), true)) {
+                for (final File file : FileUtils.listFiles(mySourceCSVs, new FileExtFileFilter("csv"), true)) {
                     reader = new CSVReader(new FileReader(file));
 
                     images.addAll(reader.readAll());
