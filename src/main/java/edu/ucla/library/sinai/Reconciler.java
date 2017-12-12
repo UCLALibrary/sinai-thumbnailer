@@ -162,7 +162,7 @@ public final class Reconciler {
                 while (fsIterator.hasNext()) {
                     final String key = fsIterator.next();
 
-                    writer.writeNext(new String[] { key, fsMap.get(key) });
+                    writer.writeNext(new String[] { fsMap.get(key), key });
                 }
 
                 writer.close();
