@@ -52,7 +52,7 @@ public final class Reconciler {
     @Option(name = { "-d", "--dir" }, description = "A directory that contains CSV source files")
     public File myDir;
 
-    // Generate with: find /sinai/cifsemel -printf '"%P";"%Tc";"%s";\n' > ~/filesystem.csv
+    // Generate with: find /sinai/cifsemel -regex ".*\.\(tif\|TIF\)" -printf '"%P";\n' > ~/filesystem.csv
     @Option(name = { "-c", "--csv" }, description = "A CSV file from a file system traversal")
     public File myCSVFile;
 
